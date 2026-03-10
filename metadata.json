@@ -1,0 +1,8 @@
+{
+  "name": "HolaGordi!",
+  "description": "Escáner de códigos de barras para obtener información nutricional detallada de productos.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

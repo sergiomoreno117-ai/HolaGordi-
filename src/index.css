@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #10b981; /* emerald-500 */
+  --color-primary-dark: #059669; /* emerald-600 */
+  --color-primary-light: #34d399; /* emerald-400 */
+}
+
+@layer base {
+  body {
+    @apply bg-emerald-50/30 text-zinc-900 antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-emerald-100 shadow-sm rounded-[2rem] transition-all duration-300;
+  }
+  
+  .primary-btn {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl transition-all active:scale-95 disabled:opacity-50 disabled:active:scale-100 shadow-lg shadow-emerald-600/20;
+  }
+
+  .secondary-btn {
+    @apply bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold rounded-2xl transition-all active:scale-95;
+  }
+}
+
+/* Custom styles for html5-qrcode scanner */
+#reader {
+  border: none !important;
+  background: transparent !important;
+}
+
+#reader__scan_region {
+  background: transparent !important;
+}
+
+#reader__dashboard {
+  background-color: white !important;
+  padding: 1.5rem !important;
+  border-top: 1px solid #e4e4e7 !important;
+}
+
+#reader__dashboard_section_csr button {
+  background-color: #10b981 !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.75rem !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  border: none !important;
+  transition: all 0.2s !important;
+}
+
+#reader__camera_selection {
+  background-color: white !important;
+  border: 1px solid #e4e4e7 !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem !important;
+  font-size: 0.875rem !important;
+  color: #18181b !important;
+  font-weight: 500 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
